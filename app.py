@@ -23,9 +23,6 @@ OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 QDRANT_API_KEY = st.secrets["QDRANT_API_KEY"]
 CLUSTER_QDRANT_URL = st.secrets["CLUSTER_QDRANT_URL"]
 
-# Configuration OpenAI - initialisation du client
-openai_client = openai.OpenAI(api_key=OPENAI_API_KEY)
-
 class MotivationBlocksSearcher:
     """Classe pour rechercher dans la collection blocs_motivation."""
 
@@ -44,7 +41,9 @@ class MotivationBlocksSearcher:
 
     def generate_embedding(self, text: str) -> List[float]:
         """Génère un embedding pour le texte donné."""
-        response = openai.embeddings.create(
+        # Initialiser le client OpenAI ici
+        client = openai.OpenAI(api_key=OPENAI_API_KEY)
+        response = client.embeddings.create(
             model="text-embedding-3-large",
             input=text,
             dimensions=VECTOR_SIZE

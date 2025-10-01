@@ -23,8 +23,8 @@ OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 QDRANT_API_KEY = st.secrets["QDRANT_API_KEY"]
 CLUSTER_QDRANT_URL = st.secrets["CLUSTER_QDRANT_URL"]
 
-# Configuration OpenAI
-openai.api_key = OPENAI_API_KEY
+# Configuration OpenAI - initialisation du client
+openai_client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
 class MotivationBlocksSearcher:
     """Classe pour rechercher dans la collection blocs_motivation."""

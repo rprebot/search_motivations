@@ -15,7 +15,7 @@ st.set_page_config(
 
 # Configuration des constantes
 COLLECTION_NAME = "blocs_motivation"
-VECTOR_SIZE = 3072
+VECTOR_SIZE = 256
 DEFAULT_LIMIT = 10
 
 # Récupération des clés API depuis les secrets Streamlit

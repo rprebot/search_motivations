@@ -138,7 +138,7 @@ def main():
     
     # Zone de saisie de la requête
     query = st.text_area(
-        "📝 Votre question juridique :",
+        "📝 Moyen de droit invoqué :",
         height=150,
         placeholder="Exemple : L'employeur qui manque à son obligation de sécurité prévue à l'article L. 4121-1 du Code du travail...",
         help="Posez votre question juridique en langage naturel"

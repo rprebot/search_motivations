@@ -132,7 +132,7 @@ def get_searcher():
 def main():
     # En-tête
     st.title("⚖️ Recherche de Jurisprudence")
-    st.markdown("### 🔍 Trouvez des motivations juridiques répondant au moyen de droit soulevé")
+    st.markdown("### 🔍 Trouvez des motivations juridiques répondant au moyen de droit soulevé parmi + 10000 décisions en cour de cassation")
     
     st.markdown("---")
     
